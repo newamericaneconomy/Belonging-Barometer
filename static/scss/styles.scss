@@ -2,9 +2,17 @@
 @import "../../node_modules/bootstrap/scss/functions";
 
 // Override default variables here
-$primary: red;
-$secondary: orange;
+$primary: #0869a6;
+$secondary: #a9bf04;
 $success: blue;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px,
+);
 
 // Include remainder of required Bootstrap stylesheets
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -22,3 +30,36 @@ $success: blue;
 
 // Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../../node_modules/bootstrap/scss/utilities/api";
+
+body {
+  background: linear-gradient(#f2ac29, #cce0f4, #1e9cd7);
+}
+
+.wrapper {
+  background: white;
+  width: 95%;
+}
+
+.img-container {
+  position: relative;
+}
+
+.cloneImage__innerImage {
+  position: absolute;
+}
+
+p,
+span,
+strong {
+  font-size: 1.25rem;
+}
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.page-content {
+  font-family: $font-family-body;
+}
+
+@import "components/buttons";
+@import "components/hero";

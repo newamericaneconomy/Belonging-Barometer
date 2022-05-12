@@ -1,0 +1,45 @@
+.hero {
+  position: relative;
+  &::after {
+    background-image: url("/dist/img/waves.png");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    content: "";
+    left: 0;
+    height: 100%;
+    left: -6%;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 0;
+    background-size: cover;
+  }
+
+  &__title,
+  &__subtitle,
+  &__text,
+  &__btn {
+    z-index: 2;
+    position: relative;
+  }
+
+  &__title {
+    @include font-family-heading-medium;
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  &__subtitle {
+    @include font-family-heading-light;
+    font-size: 2.5rem;
+    position: relative;
+    top: -12px;
+  }
+
+  &__text {
+    @include font-family-heading-medium;
+    font-size: 1.5rem;
+  }
+}
