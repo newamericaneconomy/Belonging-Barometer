@@ -1,0 +1,32 @@
+.contact {
+  &__name {
+    font-size: 1.25rem;
+    color: black;
+    text-decoration: none;
+    transition: 250ms all;
+    position: relative;
+
+    &::before {
+      width: 100%;
+      height: 3.5px;
+      background-color: rgba($primary, 0.2);
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      transition: 250ms all;
+    }
+
+    &:hover {
+      color: black;
+    }
+
+    &:hover::before {
+      height: 6.5px;
+    }
+  }
+  &__org {
+    color: $c-gray;
+    font-weight: 600;
+  }
+}

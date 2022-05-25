@@ -5,6 +5,7 @@
 $primary: #0869a6;
 $secondary: #a9bf04;
 $success: blue;
+$c-gray: #666666;
 
 $container-max-widths: (
   sm: 540px,
@@ -18,6 +19,26 @@ $container-max-widths: (
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/root";
+
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25,
+  ),
+  2: (
+    $spacer * 0.5,
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 1.5,
+  ),
+  5: (
+    $spacer * 3,
+  ),
+  6: (
+    $spacer * 5,
+  ),
+);
 
 // Include any optional Bootstrap CSS as needed
 @import "../../node_modules/bootstrap/scss/utilities";
@@ -33,6 +54,7 @@ $container-max-widths: (
 
 body {
   background: linear-gradient(#f2ac29, #cce0f4, #1e9cd7);
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -54,6 +76,7 @@ strong {
   font-size: 1.25rem;
 }
 
+@import "abstracts/animations";
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
@@ -61,5 +84,9 @@ strong {
   font-family: $font-family-body;
 }
 
+@import "layout/footer";
+
 @import "components/buttons";
 @import "components/hero";
+@import "components/contact";
+@import "components/circles";

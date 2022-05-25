@@ -11,7 +11,13 @@ const browsersync = require("browser-sync").create(),
   babel = require("gulp-babel");
 
 // Default Gulp Task
-exports.default = series(scssTask, browsersyncServe, watchTask);
+exports.default = series(
+  scssTask,
+  jsTask,
+  imageTask,
+  browsersyncServe,
+  watchTask
+);
 
 // Sass Task
 function scssTask() {
@@ -56,9 +62,8 @@ function browsersyncReload(cb) {
 
 // Watch Task
 function watchTask() {
-  watch(["*.html"], browsersyncReload);
   watch(
-    ["static/**/*.scss", "/static/*.scss", "*.html"],
+    ["./static/js/*.js", "./static/**/*.scss", "./static/*.scss", "./*.html"],
     series(scssTask, jsTask, imageTask, browsersyncReload)
   );
 }
