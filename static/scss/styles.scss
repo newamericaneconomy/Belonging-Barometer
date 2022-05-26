@@ -4,15 +4,15 @@
 // Override default variables here
 $primary: #0869a6;
 $secondary: #a9bf04;
-$success: blue;
+$success: #f2b705;
 $c-gray: #666666;
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
-  xxl: 1280px,
+  xl: 1168px,
+  xxl: 1168px,
 );
 
 // Include remainder of required Bootstrap stylesheets
@@ -82,6 +82,10 @@ strong {
 
 .page-content {
   font-family: $font-family-body;
+
+  &__inner {
+    z-index: 20;
+  }
 }
 
 @import "layout/footer";

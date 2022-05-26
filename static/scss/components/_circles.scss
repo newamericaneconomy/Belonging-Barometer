@@ -26,3 +26,25 @@
     transform: scale(1);
   }
 }
+
+#circle1 {
+  top: 0;
+  left: -75%;
+  position: absolute;
+  opacity: 0.3;
+
+  .circle__innerCircle {
+    border-color: $success;
+  }
+}
+
+#circle2 {
+  top: 0;
+  right: -313px;
+  position: absolute;
+  opacity: 0.2;
+
+  .circle__innerCircle {
+    border-color: $primary;
+  }
+}

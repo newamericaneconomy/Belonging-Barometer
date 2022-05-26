@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   &::after {
-    background-image: url("/dist/img/waves.png");
+    background-image: url("dist/img/waves.png");
     position: absolute;
     width: 100%;
     height: 100%;
@@ -9,14 +9,20 @@
     content: "";
     left: 0;
     height: 100%;
-    left: -6%;
+    left: -12%;
     position: absolute;
+    background-repeat: no-repeat;
     top: 0;
     width: 100vw;
     z-index: 0;
     opacity: 0;
     background-size: cover;
     animation: fadeIn 250ms ease-in 200ms 1 normal forwards;
+
+    @include media-breakpoint-down(md) {
+      left: -3%;
+      top: -75px;
+    }
   }
 
   &__title,
